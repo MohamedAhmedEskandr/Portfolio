@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+    width: 100%; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start; /* Align children at the top */
+}
+
+.introduction {
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.9;
+    overflow: hidden; 
+}
+
+.introduction h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+.introduction h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.contact-icons {
+    margin: 20px 0;
+}
+
+.contact-icons a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #007bff;
+    transform: scale(1.1); 
+}
+
+.navigation {
+    position: absolute; 
+    top: 80px; 
+    left: 20px; /* Keep the left position the same */
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+}
+
+.navigation a {
+    margin: 10px 0; /* Add vertical spacing */
+    font-size: 2rem; /* Adjust the size of the icons */
+    color: #333; /* Default color */
+    transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.navigation a:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about {
+    display: flex; /* Use flexbox for a two-column layout */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    background-color: #ffffff; /* Background color */
+    padding: 40px; /* Padding for spacing */
+    margin: 20px auto; /* Center the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 1200px; /* Limit width for better readability */
+}
+
+.about-content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Add padding inside content */
+}
+
+.about-content h1 {
+    font-size: 2.5rem; /* Larger font size for heading */
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Heading color */
+    font-weight: bold; /* Make the font bolder */
+}
+
+.about-content p {
+    font-size: 1.1rem; /* Font size for paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+    font-weight: 500; /* Make the paragraph text bolder */
+}
+
+.about-image {
+    flex: 0 0 300px; /* Fixed width for the image column */
+    display: flex; /* Center image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-left: 20px; /* Space between text and image */
+}
+
+.about-image img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .about-image {
+        margin-left: 0; /* Remove margin for stacking */
+        margin-top: 20px; /* Space above image when stacked */
+    }
+}
